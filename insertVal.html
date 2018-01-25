@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Independence</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+	<body>
+		<form method="POST" action="insertVal.php" style="margin: 0 auto;text-align: center;">
+			<select name="investimento" id="investimento" >
+				<option value="SICREDI PREVIDENCIA">SICREDI PREVIDENCIA</option>
+				<option value="TESOURO IPCA+ 2024 (NTNB PRINC)">TESOURO IPCA+ 2024 (NTNB PRINC)</option>
+				<option value="TESOURO PREFIXADO 2023 (LTN)">TESOURO PREFIXADO 2023 (LTN)</option>
+				<option value="TESOURO PREFIXADO COM JUROS SEMESTRAIS 2027 (NTNF)">TESOURO PREFIXADO COM JUROS SEMESTRAIS 2027 (NTNF)</option>
+				<option value="TESOURO SELIC 2023 (LFT)">TESOURO SELIC 2023 (LFT)</option>
+				<option value="FGTS">FGTS</option>
+				<option value="BitCoins FoxBit">BitCoins FoxBit</option>
+			</select>
+			<input type="text" name="valor" id="valor" placeholder="Valor" />
+			<input type="submit" value="Salvar" id="salvar" name="salvar">
+		</form>
+		<div style="width:70%">
+			<canvas id="myChart"></canvas>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+			<script src="js/jquery-3.2.1.min.js"></script>
+			<script src="js/line-db-php.js"></script>
+		</div>
+		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="assets/js/main.js"></script>
+	</body>
+</html>
