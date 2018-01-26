@@ -15,12 +15,6 @@ $(document).ready(function(){
 				value.dia.push(data[i].data);
 				if (data[i].investimento == "SICREDI PREVIDENCIA"){
 					value.SICREDI_PREVIDENCIA.push(data[i].valor);
-				}else if (data[i].investimento == "TESOURO SELIC 2023 (LFT)"){
-					value.TESOURO_SELIC_2023_LFT.push(data[i].valor);
-				}else if (data[i].investimento == "TESOURO IPCA+ 2024 (NTNB PRINC)"){
-					value.TESOURO_IPCA_2024_NTNB_PRINC.push(data[i].valor);
-				}else if (data[i].investimento == "TESOURO PREFIXADO 2023 (LTN)"){
-					value.TESOURO_PREFIXADO_2023_LTN.push(data[i].valor);
 				}
 			}
 			
