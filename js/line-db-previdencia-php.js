@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$.ajax({
-		url: "http://35.196.151.201/independence/api/data.php",
+		url: "http://35.224.227.85/independence/api/data.php",
 		method: "GET",
 		success: function(data) {
 			console.log(data);
