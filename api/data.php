@@ -11,7 +11,7 @@ if (!$connect) {
     echo "Debugging error: " . mysqli_connect_error() . PHP_EOL;
     exit;
 }
-$query = "SELECT DATE_FORMAT(data,'%d/%m/%Y') AS data, investimento, valor from valores_diarios WHERE login = '$login' ";
+$query = "SELECT DATE_FORMAT(data,'%d/%m/%Y') AS data, investimento, valor from valores_diarios WHERE login = '$login' order by DATE_FORMAT(data,'%Y/%m/%d') ";
 
 $result = mysqli_query($connect, $query);
 
