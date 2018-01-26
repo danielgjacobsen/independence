@@ -12,8 +12,8 @@ $(document).ready(function(){
 			var len = data.length;
 
 			for(var i = 0; i < len; i++) {
-				value.dia.push(data[i].data);
 				if (data[i].investimento == "FGTS"){
+					value.dia.push(data[i].data);
 					value.FGTS.push(data[i].valor);
 				}
 			}

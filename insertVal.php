@@ -5,7 +5,7 @@
 		$login = $_COOKIE['login'];
 			$connect = mysqli_connect('localhost', 'root', '12qwaszx', 'independence');
 			if($investimento == "" || $investimento == null || $perfil == "" || $perfil == null || $valor == "" || $valor == null){
-						echo"<script language='javascript' type='text/javascript'>alert('Todos os campos devem ser preenchidos');window.location.href='insertValForm.php';</script>";
+						echo"<script language='javascript' type='text/javascript'>alert('Todos os campos devem ser preenchidos');window.location.reload();</script>";
 							}else{
 										$query = "INSERT INTO valores_diarios (login, investimento, valor) VALUES ('$login','$investimento', '$valor')";
 												$insert = mysqli_query($connect, $query);

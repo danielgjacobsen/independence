@@ -12,8 +12,8 @@ $(document).ready(function(){
 			var len = data.length;
 
 			for(var i = 0; i < len; i++) {
-				value.dia.push(data[i].data);
 				if (data[i].investimento == "SICREDI PREVIDENCIA"){
+					value.dia.push(data[i].data);
 					value.SICREDI_PREVIDENCIA.push(data[i].valor);
 				}
 			}

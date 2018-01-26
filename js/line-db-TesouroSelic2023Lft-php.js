@@ -12,8 +12,8 @@ $(document).ready(function(){
 			var len = data.length;
 
 			for(var i = 0; i < len; i++) {
-				value.dia.push(data[i].data);
 				if (data[i].investimento == "TESOURO SELIC 2023 (LFT)"){
+					value.dia.push(data[i].data);
 					value.TESOURO_SELIC_2023_LFT.push(data[i].valor);
 				}
 			}

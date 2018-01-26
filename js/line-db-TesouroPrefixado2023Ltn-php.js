@@ -12,8 +12,8 @@ $(document).ready(function(){
 			var len = data.length;
 
 			for(var i = 0; i < len; i++) {
-				value.dia.push(data[i].data);
 				if (data[i].investimento == "TESOURO PREFIXADO 2023 (LTN)"){
+					value.dia.push(data[i].data);
 					value.TESOURO_PREFIXADO_2023_LTN.push(data[i].valor);
 				}
 			}
