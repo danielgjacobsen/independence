@@ -17,17 +17,17 @@
 	<body>
 		<form method="POST" action="insertVal.php" style="margin: 0 auto;text-align: center;">
 			<select name="investimento" id="investimento" >
-				<option value="SICREDI PREVIDENCIA">SICREDI PREVIDENCIA</option>
+				<option value="TESOURO SELIC 2023 (LFT)">TESOURO SELIC 2023 (LFT)</option>
 			</select>
 			<input type="text" name="valor" id="valor" placeholder="Valor" />
 			<input type="submit" value="Salvar" id="salvar" name="salvar">
-			<input type="button" onclick="location.href='insertValTesouroIpca2024NtnbPrinc.html';" value="Next" />
+			<input type="button" onclick="location.href='insertValBitcoins.html';" value="Next" />
 		</form>
 		<div style="width:70%">
 			<canvas id="myChart"></canvas>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 			<script src="js/jquery-3.2.1.min.js"></script>
-			<script src="js/line-db-previdencia-php.js"></script>
+			<script src="js/line-db-TesouroSelic2023Lft-php.js"></script>
 		</div>
 		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 		<script src="assets/js/main.js"></script>
