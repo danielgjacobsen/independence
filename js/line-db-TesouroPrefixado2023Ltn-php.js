@@ -6,15 +6,19 @@ $(document).ready(function(){
 			console.log(data);
 			var value = {
 				dia : [],
-				TESOURO_PREFIXADO_2023_LTN : [],
+				TESOURO_PREFIXADO_2023_LTN : [],,
+				diff : [],
 			};
 			
 			var len = data.length;
-
+			var oldValue = 0;
+			
 			for(var i = 0; i < len; i++) {
 				if (data[i].investimento == "TESOURO PREFIXADO 2023 (LTN)"){
 					value.dia.push(data[i].data);
 					value.TESOURO_PREFIXADO_2023_LTN.push(data[i].valor);
+					value.diff.push(data[i].valor - oldValue);
+					oldValue = data[i].valor;
 				}
 			}
 			
@@ -29,6 +33,15 @@ $(document).ready(function(){
 						label : "TESOURO PREFIXADO 2023 (LTN)",
 						data : value.TESOURO_PREFIXADO_2023_LTN,
 						backgroundColor : "blue",
+						borderColor : "lightblue",
+						fill : false,
+						lineTension : 0,
+						pointRadius : 5
+					},
+					{
+						label : "Diferenca",
+						data : value.diff,
+						backgroundColor : "green",
 						borderColor : "lightblue",
 						fill : false,
 						lineTension : 0,
