@@ -6,7 +6,7 @@ $(document).ready(function(){
 			console.log(data);
 			var value = {
 				dia : [],
-				TESOURO_IPCA_2024_NTNB_PRINC : [],,
+				TESOURO_IPCA_2024_NTNB_PRINC : [],
 				TESOURO_IPCA_2024_NTNB_PRINC_diff : [],
 			};
 			
