@@ -7,7 +7,7 @@ $(document).ready(function(){
 			var value = {
 				dia : [],
 				TESOURO_SELIC_2023_LFT : [],,
-				diff : [],
+				TESOURO_SELIC_2023_LFT_diff : [],
 			};
 			
 			var len = data.length;
@@ -17,7 +17,7 @@ $(document).ready(function(){
 				if (data[i].investimento == "TESOURO SELIC 2023 (LFT)"){
 					value.dia.push(data[i].data);
 					value.TESOURO_SELIC_2023_LFT.push(data[i].valor);
-					value.diff.push(data[i].valor - oldValue);
+					value.TESOURO_SELIC_2023_LFT_diff.push(data[i].valor - oldValue);
 					oldValue = data[i].valor;
 				}
 			}
@@ -40,7 +40,7 @@ $(document).ready(function(){
 					},
 					{
 						label : "Diferenca",
-						data : value.diff,
+						data : value.TESOURO_SELIC_2023_LFT_diff,
 						backgroundColor : "green",
 						borderColor : "lightblue",
 						fill : false,
