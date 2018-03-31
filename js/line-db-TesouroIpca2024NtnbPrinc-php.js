@@ -7,7 +7,7 @@ $(document).ready(function(){
 			var value = {
 				dia : [],
 				TESOURO_IPCA_2024_NTNB_PRINC : [],,
-				diff : [],
+				TESOURO_IPCA_2024_NTNB_PRINC_diff : [],
 			};
 			
 			var len = data.length;
@@ -17,7 +17,7 @@ $(document).ready(function(){
 				if (data[i].investimento == "TESOURO IPCA+ 2024 (NTNB PRINC)"){
 					value.dia.push(data[i].data);
 					value.TESOURO_IPCA_2024_NTNB_PRINC.push(data[i].valor);
-					value.diff.push(data[i].valor - oldValue);
+					value.TESOURO_IPCA_2024_NTNB_PRINC_diff.push(data[i].valor - oldValue);
 					oldValue = data[i].valor;
 				}
 			}
@@ -40,7 +40,7 @@ $(document).ready(function(){
 					},
 					{
 						label : "Diferenca",
-						data : value.diff,
+						data : value.TESOURO_IPCA_2024_NTNB_PRINC_diff,
 						backgroundColor : "green",
 						borderColor : "lightblue",
 						fill : false,
