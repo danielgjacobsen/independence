@@ -7,14 +7,18 @@ $(document).ready(function(){
 			var value = {
 				dia : [],
 				SICREDI_PREVIDENCIA : [],
+				diff : [],
 			};
 			
 			var len = data.length;
+			var oldValue = 0;
 
 			for(var i = 0; i < len; i++) {
 				if (data[i].investimento == "SICREDI PREVIDENCIA"){
 					value.dia.push(data[i].data);
 					value.SICREDI_PREVIDENCIA.push(data[i].valor);
+					value.diff.push(data[i].valor - oldValue);
+					oldValue = data[i].valor;
 				}
 			}
 			
@@ -29,6 +33,15 @@ $(document).ready(function(){
 						label : "SICREDI PREVIDENCIA",
 						data : value.SICREDI_PREVIDENCIA,
 						backgroundColor : "blue",
+						borderColor : "lightblue",
+						fill : false,
+						lineTension : 0,
+						pointRadius : 5
+					},
+					{
+						label : "Diferenca",
+						data : value.diff,
+						backgroundColor : "green",
 						borderColor : "lightblue",
 						fill : false,
 						lineTension : 0,
