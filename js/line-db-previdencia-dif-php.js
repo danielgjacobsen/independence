@@ -10,11 +10,13 @@ $(document).ready(function(){
 			};
 			
 			var len = data.length;
+			var oldValue = 0;
 
 			for(var i = 0; i < len; i++) {
 				if (data[i].investimento == "SICREDI PREVIDENCIA"){
 					value.dia.push(data[i].data);
-					value.SICREDI_PREVIDENCIA.push(data[i].valor);
+					value.SICREDI_PREVIDENCIA.push(data[i].valor - oldValue);
+					oldValue = data[i].valor;
 				}
 			}
 			
