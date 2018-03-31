@@ -7,7 +7,7 @@
 			if($investimento == "" || $investimento == null || $perfil == "" || $perfil == null || $valor == "" || $valor == null){
 						echo"<script language='javascript' type='text/javascript'>alert('Todos os campos devem ser preenchidos');window.location.href=document.referrer</script>";
 							}else{
-										$query = "INSERT INTO valores_diarios (login, investimento, valor) VALUES ('$login','$investimento', '$valor')";
+										$query = "INSERT INTO valores_diarios (login, investimento, valor) VALUES ('$login','$investimento', REPLACE(REPLACE('$valor', '.', ''), ',', '.'))";
 												$insert = mysqli_query($connect, $query);
 												if($insert){
 																echo"<script language='javascript' type='text/javascript'>alert('Valor cadastrado com sucesso!');window.location.href=document.referrer</script>";
