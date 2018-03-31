@@ -6,7 +6,7 @@ $(document).ready(function(){
 			console.log(data);
 			var value = {
 				dia : [],
-				TESOURO_PREFIXADO_2023_LTN : [],,
+				TESOURO_PREFIXADO_2023_LTN : [],
 				TESOURO_PREFIXADO_2023_LTN_diff : [],
 			};
 			
